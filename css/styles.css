@@ -14,3 +14,19 @@ footer {
 p{
     margin-bottom: 2px;
 }
+
+#seccion1{
+    background-color: teal;
+}
+
+#seccion4{
+    background-color: yellowgreen;
+}
+
+#contentCards{
+    padding-top: 50px;
+}
+
+.imgCircle{
+    border-radius: 80px;
+}
