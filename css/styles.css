@@ -41,3 +41,14 @@ p{
 h1{
     text-align: left;
 }
+
+#contentBannerHeroe{
+    height: 500px;
+    background-image: url("/img/city.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#contentHeroe{
+    margin-top: -150px;
+}
