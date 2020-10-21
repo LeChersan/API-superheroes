@@ -1,7 +1,7 @@
 const settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://rapidapi.p.rapidapi.com/?hero=spiderman",
+	"url": "https://rapidapi.p.rapidapi.com/?hero=superman",
     "method": "GET",
     "dataType": "JSON",
 	"headers": {
@@ -14,18 +14,53 @@ const settings = {
 // 	console.log(response);
 // })
 
-$.get(settings)
-.done(function(response){
-    console.log(response);
-    console.log(response.name)
-    console.log(response.powerstats.power)
-    console.log(response.work.occupation)
-    console.log(`mi nombre es ${response.name}, y trabajo de ${response.work.occupation}`)
-})
-.fail(function(){
-    console.log("error en el servidor")
-})
-.always(function(){
-    console.log("finished")
-})
+
+
+for (let index = 20; index < 31; index++){
+    console.log(index)
+}
+
+for( let index2 = 5; index2 < 10 ; index2++ ){
+    console.log(index2)
+}
+for( let index3 = 1; index3 < 7; index3++){    
+}
+
+let index4 = 0
+
+let cicloApi = setInterval(function(){ 
+
+    index4++
+
+    $.get(settings)
+    .done(function(heroe){
+        console.log(heroe);
+        console.log(heroe.name)
+        console.log(heroe.powerstats.power)
+        console.log(heroe.work.occupation)
+        console.log(`mi nombre es ${heroe.name}, y trabajo de ${heroe.work.occupation}`)
+    })
+    .fail(function(){
+        console.log("error en el servidor, favor de intentar mas tarde")
+    })
+    .always(function(){
+        console.log("finished")
+    })
+
+    if (index4 >= 6){
+        myStopFunction()
+    }
+
+}, 1700);
+
+const myStopFunction = () => {
+
+    clearInterval(cicloApi);
+
+}
+
+
+
+
+
 
