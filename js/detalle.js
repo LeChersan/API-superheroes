@@ -1,7 +1,7 @@
 const settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://rapidapi.p.rapidapi.com/?hero=superman",
+	"url": "",
     "method": "GET",
     "dataType": "JSON",
 	"headers": {
@@ -14,23 +14,20 @@ const settings = {
 // 	console.log(response);
 // })
 
+// for (let index = 20; index < 31; index++){
+//     console.log(index)
+// }
 
+// for( let index2 = 5; index2 < 10 ; index2++ ){
+//     console.log(index2)
+// }
+// for( let index3 = 1; index3 < 7; index3++){    
+// }
 
-for (let index = 20; index < 31; index++){
-    console.log(index)
-}
+const getHeroes = () =>{
 
-for( let index2 = 5; index2 < 10 ; index2++ ){
-    console.log(index2)
-}
-for( let index3 = 1; index3 < 7; index3++){    
-}
-
-let index4 = 0
-
-let cicloApi = setInterval(function(){ 
-
-    index4++
+    let nombreHeroes = ["spiderman", "hulk", "superman", "wonderwoman", "thor", "blackpanther"]
+    settings.url = `https://rapidapi.p.rapidapi.com/?hero=${nombreHeroes[index]}`
 
     $.get(settings)
     .done(function(heroe){
@@ -46,8 +43,18 @@ let cicloApi = setInterval(function(){
     .always(function(){
         console.log("finished")
     })
+}
 
-    if (index4 >= 6){
+let index = 0
+
+let cicloApi = setInterval(function(){ 
+
+    
+    getHeroes()
+    index++
+
+
+    if (index >= 6){
         myStopFunction()
     }
 
