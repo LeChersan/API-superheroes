@@ -30,16 +30,51 @@ let elementsRender = {
                         <br>
                         <br>
                     </div>`
-    
         $("#contentCards").append(card)
-
     },
     cardLargeImgLeft: (dataHeroe) => {
         console.log(`renderCardLargeImgLeft ${dataHeroe.name}`)
 
+        let cardLeft = `<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <hr>
+                            <div class="row cardLarge">
+                                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                    <h1 class="display-4">${dataHeroe.name}</h1>
+                                    <h1 class="display-5 text-muted">${dataHeroe.biography.fullName}</h1>
+                                    <p class="lead">[${dataHeroe.biography.placeOfBirth}]
+                                    <hr>
+                                    ${dataHeroe.connections.groupAffiliation}</p> 
+                                    <button type="button" class="btn btn-secondary">Learn more</button>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                    <img src="${dataHeroe.images.md}" alt="${dataHeroe.name}" width="100%">                       
+                                </div>
+                            </div>
+                        </div>`
+
+                        $("#contentCardsLarge").append(cardLeft)
     },
     cardLargeImgRight: (dataHeroe) => {
         console.log(`renderCardLargeImgRight ${dataHeroe.name}`)
+
+        let cardRight = `<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <hr>
+                            <div class="row cardLarge">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                    <img src="${dataHeroe.images.md}" alt="${dataHeroe.name}" width="100%">                       
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                    <h1 class="display-4">${dataHeroe.name}</h1>
+                                    <h1 class="display-5 text-muted">${dataHeroe.biography.fullName}</h1>
+                                    <p class="lead">[${dataHeroe.biography.placeOfBirth}]
+                                    <hr>
+                                    ${dataHeroe.connections.groupAffiliation}</p>
+                                    <button type="button" class="btn btn-secondary">Secondary</button>
+                                </div>
+                            </div>
+                        </div>`
+
+                         $("#contentCardsLarge").append(cardRight)
 
     }
 }
@@ -89,7 +124,7 @@ let cicloApi = setInterval(function(){
         myStopFunction()
     }
 
-}, 1550);
+}, 1600);
 
 const myStopFunction = () => {
 
