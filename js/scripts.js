@@ -36,7 +36,7 @@ let elementsRender = {
         console.log(`renderCardLargeImgLeft ${dataHeroe.name}`)
 
         let cardLeft = `<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                            <hr>
+                            <hr> 
                             <div class="row cardLarge">
                                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 img1">
                                     <img src="${dataHeroe.images.md}" alt="${dataHeroe.name}" width="100%">                       
