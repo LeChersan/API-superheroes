@@ -26,7 +26,7 @@ let elementsRender = {
                         <img src="${dataHeroe.images.md}" alt="${dataHeroe.name}" width="80%" class="imgCircle">
                         <h2>${dataHeroe.name}</h2>
                         <p>${dataHeroe.connections.groupAffiliation}</p>
-                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <a href="detalle.html?id=${dataHeroe.id}" class="btn btn-secondary">Secondary</a>
                         <br>
                         <br>
                     </div>`
@@ -38,15 +38,18 @@ let elementsRender = {
         let cardLeft = `<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                             <hr>
                             <div class="row cardLarge">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 img1">
+                                    <img src="${dataHeroe.images.md}" alt="${dataHeroe.name}" width="100%">                       
+                                </div>
                                 <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                     <h1 class="display-4">${dataHeroe.name}</h1>
                                     <h1 class="display-5 text-muted">${dataHeroe.biography.fullName}</h1>
                                     <p class="lead">[${dataHeroe.biography.placeOfBirth}]
                                     <hr>
                                     ${dataHeroe.connections.groupAffiliation}</p> 
-                                    <button type="button" class="btn btn-secondary">Learn more</button>
+                                    <a href="detalle.html?id=${dataHeroe.id}" class="btn btn-secondary">Secondary</a>
                                 </div>
-                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 img2">
                                     <img src="${dataHeroe.images.md}" alt="${dataHeroe.name}" width="100%">                       
                                 </div>
                             </div>
@@ -69,7 +72,7 @@ let elementsRender = {
                                     <p class="lead">[${dataHeroe.biography.placeOfBirth}]
                                     <hr>
                                     ${dataHeroe.connections.groupAffiliation}</p>
-                                    <button type="button" class="btn btn-secondary">Secondary</button>
+                                    <a href="detalle.html?id=${dataHeroe.id}" class="btn btn-secondary">Secondary</a>
                                 </div>
                             </div>
                         </div>`
@@ -124,7 +127,7 @@ let cicloApi = setInterval(function(){
         myStopFunction()
     }
 
-}, 1600);
+}, 1700);
 
 const myStopFunction = () => {
 
